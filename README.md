@@ -25,7 +25,7 @@ Datasets:
   
 
 Challenges:  
-  There are two primary challenges in classification. First, in order to use PaLD, a "distance" between points is required. My approach is to define the distance between two time series through using one as a filter of the other. In essence, after normalization, the first time series is cut into a window of N samples and then is slid across the other. The number of times the time series cross each other is then recorded and the maximum number of crossings is converted into a distance. This takes into account the concern that the data may not have been perfectly aligned -- after all, when does an earthquake really start?   
+  There are two primary challenges in classification. First, in order to use PaLD, a "distance" between points is required. My approach is to define the distance between two time series through using one as a filter of the other. In essence, the first time series is cut into a window of N samples and then is slid across the other. The number of times the time series cross each other is then recorded and the maximum number of crossings is converted into a distance. This takes into account the concern that the data may not have been perfectly aligned -- after all, when does an earthquake really start?   
   
   The second challenge is that there is not very much data, only about 40 earthquakes and 60 explosions total. I use Monte Carlo cross-validation to combat this. A training dataset is randomly sampled from the whole set, and then a separate seismic event is classified as an earthquake or explosion using the partition PaLD assigns to that test point. This is repeated 1000 times, and various machine learning metrics can be determined based on the classifications.  
   
