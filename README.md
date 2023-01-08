@@ -31,7 +31,7 @@ signals as well like volcanic seismicity and tides-related seismic noise.
   
   
 # Results:  
-  Taking the training samples to be size 30 (15 earthquakes and 15 explosions), the resulting confusion matrix is [[513, 75], [3, 409]]. In words, of the 513 cross-validation samples where the target was an earthquake, only 13 were incorrectly classified as explosions. Similarly, of the 487 samples where the target was an explosion, 79 were classified as earthquakes.
+  Taking the training samples to be size 30 (15 earthquakes and 15 explosions), the resulting confusion matrix is [[513, 75], [3, 409]]. In words, of the 516 cross-validation samples where the target was an earthquake, only 3 were incorrectly classified as explosions. Similarly, of the 484 samples where the target was an explosion, 75 were classified as earthquakes.
 
 
 
