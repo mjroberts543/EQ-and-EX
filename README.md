@@ -1,10 +1,10 @@
 # EQ-and-EX
 
-Overview:  
+# Overview:  
   This repository concerns time series analysis for the discrimination of natural earthquakes from mining explosions in Arizona and Nevada. In particular, I aim to incorporate a "clustering" algorithm PaLD into the algorithm. The vast majority of this code was written before PaLD was publicly available as a package in R, so that section of the code was written through my research concerning the paper [*A social perspective on perceived distances reveals deep community structure*](https://www.pnas.org/doi/full/10.1073/pnas.2003634119).  
   
   
-Partitioned local depth:  
+# Partitioned local depth:  
   The idea of using partitioned local depth is relatively new to the scene of data analysis. The general idea is to realize a structure on a graph of vertices $S=$ { $s_1,s_2,\ldots,s_n$ }, based on an underlying distance metric $d$ that informs the "decisions" of each vertex. The individuals form alliances by being more likely to support their neighbors than further away competitors. The applications of PaLD vary from linguistics, genetics, and cultural psychology to, of course, seismic event classification.  
 
 Informally, we can define the *conflict focus* $U_{x,y}$ as the set of individuals whose allegiance is being sought by competitors $x$ and $y$. Mathematically, this is the set of vertices that are as close to either $x$ or $y$ as $x$ and $y$ are to one another, or
@@ -19,18 +19,18 @@ Taking the partitions of the graph to be those that are "strongly" tied through 
 signals as well like volcanic seismicity and tides-related seismic noise.
 
 
-Datasets:  
+# Datasets:  
   The data used in this repository come from a collection of multiple earthquakes and explosions recorded with various seimograms in Arizona and Nevada. Each is limited to only the z-component, representing vertical displacement. We downloaded the broadband vertical component seismograms from the Incorporated Research Institutions for Seismology Data Management Centers (IRIS DMC). We then used the Seismic Analysis Code (SAC) software to remove the instruments response of the seismometer. Collecting the data was done by my coauthors on an upcoming paper.
   
   
 
-Challenges:  
+# Challenges:  
   There are two primary challenges in classification. First, in order to use PaLD, a "distance" between points is required. My approach is to define the distance between two time series through using one as a filter of the other. In essence, the first time series is cut into a window of N samples and then is slid across the other. The number of times the time series cross each other is then recorded and the maximum number of crossings is converted into a distance. This takes into account the concern that the data may not have been perfectly aligned -- after all, when does an earthquake really start?   
   
   The second challenge is that there is not very much data, only about 40 earthquakes and 60 explosions total. I use Monte Carlo cross-validation to combat this. A training dataset is randomly sampled from the whole set, and then a separate seismic event is classified as an earthquake or explosion using the partition PaLD assigns to that test point. This is repeated 1000 times, and various machine learning metrics can be determined based on the classifications.  
   
   
-Results:  
+# Results:  
   Taking the training samples to be size 30 (15 earthquakes and 15 explosions), the resulting confusion matrix is [[500,79],[13,408]]. In words, of the 513 cross-validation samples where the target was an earthquake, only 13 were incorrectly classified as explosions. Similarly, of the 487 samples where the target was an explosion, 79 were classified as earthquakes.
 
 
