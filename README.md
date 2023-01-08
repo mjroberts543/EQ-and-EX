@@ -1,7 +1,7 @@
-# EQ-and-EX
+# Earthquakes-and-Explosions
 
 # Overview:  
-  This repository concerns time series analysis for the discrimination of natural earthquakes from mining explosions in Arizona and Nevada. In particular, I aim to incorporate a "clustering" algorithm PaLD into the algorithm. The vast majority of this code was written before PaLD was publicly available as a package in R, so that section of the code was written through my research concerning the paper [*A social perspective on perceived distances reveals deep community structure*](https://www.pnas.org/doi/full/10.1073/pnas.2003634119).  
+  This repository concerns time series analysis for the discrimination of natural earthquakes from mining explosions in Arizona and Nevada. In particular, I aim to incorporate a "clustering" algorithm PaLD into the algorithm. The vast majority of this code was written before PaLD was publicly available as a package in R, so that section of the code was written through my research into the paper [*A social perspective on perceived distances reveals deep community structure*](https://www.pnas.org/doi/full/10.1073/pnas.2003634119).  
   
   
 # Partitioned local depth:  
