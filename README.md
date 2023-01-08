@@ -10,7 +10,7 @@
 Informally, we can define the *conflict focus* $U_{x,y}$ as the set of individuals whose allegiance is being sought by competitors $x$ and $y$. Mathematically, this is the set of vertices that are as close to either $x$ or $y$ as $x$ and $y$ are to one another, or
 $$U_{x,y}= [z\in S| d(z,x) \leq d(y,x) \hbox{  or  } d(z,y)\leq d(x,y) ].$$ 
 
-This conflict focus allows for the contrasting of the influence of points $x$ and $y$ over their neighbors. By comparing how influential each point is, they can be ranked based on their power in the community. This level of influence is referred to as *local (community) depth*. Ref. \cite{pald} specifically defines the local depth of a vertex $\ell_s(x)$ as the probability that a randomly selected point $Z$ supports the vertex $x$ over another randomly selected opposing point $Y$, with ties determined by a coin toss, through
+This conflict focus allows for the contrasting of the influence of points $x$ and $y$ over their neighbors. By comparing how influential each point is, they can be ranked based on their power in the community. This level of influence is referred to as *local (community) depth*. The paper above specifically defines the local depth of a vertex $l_s(x)$ as the probability that a randomly selected point $Z$ supports the vertex $x$ over another randomly selected opposing point $Y$, with ties determined by a coin toss, through
 $$l_s(x)=P(d(Z,x)\lt d(Z,Y)+P(d(Z,x)=d(Z,Y))/2.$$
 
 Further, the local depth is partitioned through the concept of the *cohesion* of vertices $x$ and $w$. The strength of the connection between these vertices is determined through how likely $w$ is to defend $x$ in conflicts, which gives pair-wise social cohesion
