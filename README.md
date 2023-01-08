@@ -20,7 +20,7 @@ signals as well like volcanic seismicity and tides-related seismic noise.
 
 
 # Datasets:  
-  The data used in this repository come from a collection of multiple earthquakes and explosions recorded with various seimograms in Arizona and Nevada. Each is limited to only the z-component, representing vertical displacement. We downloaded the broadband vertical component seismograms from the Incorporated Research Institutions for Seismology Data Management Centers (IRIS DMC). We then used the Seismic Analysis Code (SAC) software to remove the instruments response of the seismometer. Collecting the data was done by my coauthors on an upcoming paper.
+  The data used in this repository come from a collection of multiple earthquakes and explosions recorded with various seismograms in Arizona and Nevada. Each is limited to only the z-component, representing vertical displacement. We downloaded the broadband vertical component seismograms from the Incorporated Research Institutions for Seismology Data Management Centers (IRIS DMC). We then used the Seismic Analysis Code (SAC) software to remove the instruments response of the seismometer. Collecting the data was done by my coauthors on an upcoming paper.
   
   
 
